@@ -8,7 +8,7 @@
   <name>MuniServicios Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
-		<java.version>1.7</java.version>
+		<java.version>1.8</java.version>
 		
 		<!-- Hibernate -->
 		<hibernate.version>4.3.6.Final</hibernate.version>
@@ -22,12 +22,7 @@
 	</properties>
 
 	<dependencies>
-	<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-	<dependency>
-	    <groupId>commons-io</groupId>
-	    <artifactId>commons-io</artifactId>
-	    <version>2.6</version>
-	</dependency>
+	
 		
 		<dependency>
 			<groupId>mysql</groupId>
@@ -48,18 +43,6 @@
 			<version>1.9.13</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-		<dependency>
-		    <groupId>org.apache.poi</groupId>
-		    <artifactId>poi-ooxml</artifactId>
-		    <version>3.9</version>
-		</dependency>
-		
-		<dependency>
-                 <groupId>org.apache.poi</groupId>
-                 <artifactId>poi</artifactId>
-                 <version>3.9</version>
-          </dependency>
 	
 		<!-- Spring -->
 		<dependency>
@@ -170,72 +153,10 @@
 		</dependency>
 		
 
-		<dependency> 
-		    <groupId>xml-apis</groupId>
-		    <artifactId>xml-apis</artifactId>
-		    <version>2.0.2</version>
-		</dependency>
 
 	</dependencies>
 	
-	<repositories>
-		<repository>
-			<id>org.springframework.maven.release</id>
-			<name>Spring Maven Release Repository</name>
-			<url>http://repo.springsource.org/release</url>
-			<releases><enabled>true</enabled></releases>
-			<snapshots><enabled>false</enabled></snapshots>
-		</repository>
-		<!-- For testing against latest Spring snapshots -->
-		<repository>
-			<id>org.springframework.maven.snapshot</id>
-			<name>Spring Maven Snapshot Repository</name>
-			<url>http://repo.springsource.org/snapshot</url>
-			<releases><enabled>false</enabled></releases>
-			<snapshots><enabled>true</enabled></snapshots>
-		</repository>
-		<!-- For developing against latest Spring milestones -->
-		<repository>
-			<id>org.springframework.maven.milestone</id>
-			<name>Spring Maven Milestone Repository</name>
-			<url>http://repo.springsource.org/milestone</url>
-			<snapshots><enabled>false</enabled></snapshots>
-		</repository>
-
-
-		<repository>
-			<id>neo4j-release-repository</id>
-			<name>Neo4j Maven 2 release repository</name>
-			<url>http://m2.neo4j.org/content/repositories/releases</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>		
-		<repository>
-			<id>neo4j-snapshot-repository</id>
-			<name>Neo4j Maven 2 snapshot repository</name>
-			<url>http://m2.neo4j.org/content/repositories/snapshots</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
-		
-		<!--  -->
-	    
-	    
-		<repository>
-			<id>jboss-public-repo</id>
-			<url>http://repository.jboss.org/maven2/</url>
-			<name>JBoss public available repo</name>
-		</repository>
-		
-	</repositories>
+	
 	
 	<build>
 		<plugins>
@@ -254,6 +175,7 @@
 				<version>2.4</version>
 				<configuration>
 					<warName>MuniServicios</warName>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
 		</plugins>
