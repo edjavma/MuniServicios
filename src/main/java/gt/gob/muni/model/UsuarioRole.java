@@ -34,8 +34,7 @@ public class UsuarioRole {
 	
 	@Id
 	@Basic(optional = false)
-	@SequenceGenerator(name = "cSequence", sequenceName = "SEQ_USUARIO_ROLE", allocationSize = 1)
-    @GeneratedValue(generator = "cSequence",strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_USUARIO_ROLE")
 	private BigDecimal idUsuarioRole;
 	

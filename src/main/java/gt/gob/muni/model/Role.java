@@ -41,8 +41,7 @@ public class Role {
 	
 	@Id
 	@Basic(optional = false)
-	@SequenceGenerator(name = "aSequence", sequenceName = "SEQ_ROLE", allocationSize = 1)
-    @GeneratedValue(generator = "aSequence",strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_ROLE")
 	private BigDecimal idRole;
 	

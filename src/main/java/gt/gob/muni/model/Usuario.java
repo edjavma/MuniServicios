@@ -28,8 +28,7 @@ public class Usuario {
 	
 	@Id
 	@Basic(optional = false)
-	@SequenceGenerator(name = "bSequence", sequenceName = "SEQ_USUARIO", allocationSize = 1)
-    @GeneratedValue(generator = "bSequence",strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_USUARIO")
 	private BigDecimal idUsuario;
 	
